@@ -13,7 +13,7 @@ if not os.path.exists(UPLOAD_FOLDER):
 @app.route('/upload', methods=['POST'])
 def upload_file():
     if 'file' not in request.files:
-        return jsonify({"message": "No file part in the request"}), 400
+        return jsonify({"message": "No file"}), 400
 
     file = request.files['file']
 
